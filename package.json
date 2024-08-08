@@ -2,9 +2,10 @@
   "name": "express-auth-api",
   "version": "1.0.0",
   "description": "Welcome to the **Express Authentication & Authorization API** project! This backend API is designed to showcase my skills in building robust, secure, and scalable RESTful APIs using **Node.js** and **Express.js**. The project features user authentication and role-based authorization, making it ideal for modern web applications that require secure access control.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",

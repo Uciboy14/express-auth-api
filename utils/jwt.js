@@ -1,5 +1,8 @@
 // utils/jwt.js
 const jwt = require('jsonwebtoken');
+const dotenv = require('dotenv');
+
+dotenv.config()
 
 /**
  * Generates a JWT token.
@@ -8,6 +11,7 @@ const jwt = require('jsonwebtoken');
  */
 const generateToken = (user, callback) => {
     // Payload
+    console.log("User: ", user)
     const payload = {
         user: {
             id: user.id,
@@ -19,7 +23,7 @@ const generateToken = (user, callback) => {
     jwt.sign(
         payload,
         process.env.JWT_SECRET,
-        { expressIn: '1h'},
+        { expiresIn: '1h'},
         (err, token) => {
             if (err) {
                 return callback(err, null);
