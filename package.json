@@ -1,0 +1,30 @@
+{
+  "name": "express-auth-api",
+  "version": "1.0.0",
+  "description": "Welcome to the **Express Authentication & Authorization API** project! This backend API is designed to showcase my skills in building robust, secure, and scalable RESTful APIs using **Node.js** and **Express.js**. The project features user authentication and role-based authorization, making it ideal for modern web applications that require secure access control.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Uciboy14/express-auth-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Uciboy14/express-auth-api/issues"
+  },
+  "homepage": "https://github.com/Uciboy14/express-auth-api#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
