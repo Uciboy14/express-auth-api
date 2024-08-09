@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 // @desc Register user
 exports.registerUser = async (req, res) => {
     // Recieve the data from the request body
-    const { username, email, password} = req.body
+    const { username, email, password, role} = req.body
     console.log(username,email,password);
     
     try {
@@ -20,7 +20,8 @@ exports.registerUser = async (req, res) => {
         user = User({
             username,
             email,
-            password
+            password,
+            role
         });
 
         // Save the USER
@@ -55,7 +56,7 @@ exports.loginUser = async (req, res) => {
 
         // Compare the entered password with the hashed password in the database
         const isMatch = await bcrypt.compare(password, user.password);
-        
+
         // Check if the password match with the USER password
         if (!isMatch) {
             return res.status(400).json({ msg: 'Invalid Credentials'});
